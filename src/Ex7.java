@@ -9,14 +9,20 @@ public class Ex7 {
         pets.add(new Cat("Jerry", 2, "Cat"));
         pets.add(new Dog("Tyke", 1, "Dog"));
 
-        for (Pet pet : pets) {
-            if (pet.type.equals("Cat")) {
-                System.out.println("Cat: " + pet.name + " is " + pet.age + " years old");
-            } else if (pet.type.equals("Dog")) {
-                System.out.println("Dog: " + pet.name + " is " + pet.age + " years old");
+        for (Pet p : pets) {
+            if (p.type.equals("Cat")) {
+                System.out.println("Cat: " + p.name + " is " + p.age + " years old");
+            } else if (p.type.equals("Dog")) {
+                System.out.println("Dog: " + p.name + " is " + p.age + " years old");
             }
         }
     }
+}
+
+class Pet {
+    String name;
+    int age;
+    String type;
 }
 
 class Cat extends Pet {
@@ -33,10 +39,4 @@ class Dog extends Pet {
         this.age = age;
         this.type = type;
     }
-}
-
-class Pet {
-    String name;
-    int age;
-    String type;
 }
